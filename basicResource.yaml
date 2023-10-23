@@ -45,7 +45,7 @@ resourcePolicy:
         - USER
       condition:
         match:
-          expr: request.resource.attr.ownerId == request.principal.id
+          expr: request.resource.attr.ownerId == request.principal.id && request.resource.attr.isPublished == false
 
   schemas:
     principalSchema:
