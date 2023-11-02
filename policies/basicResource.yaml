@@ -36,8 +36,6 @@ resourcePolicy:
               - expr: request.resource.attr.ownerId == request.principal.id
               - expr: request.resource.attr.isPublished == true            
 
-
-
     # Only the owner of the resource can update or delete it
     - actions:
         - update
