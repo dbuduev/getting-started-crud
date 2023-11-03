@@ -4,6 +4,7 @@ apiVersion: api.cerbos.dev/v1
 resourcePolicy:
   version: default
 
+
   # This resource file is reviewed for when checking permissions when a resource
   # is of `kind` "basicResource"
   resource: basicResource
