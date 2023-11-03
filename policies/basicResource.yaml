@@ -16,7 +16,6 @@ resourcePolicy:
       roles:
         - ADMIN
 
-
     # Any user can create a resource
     - actions:
         - create
