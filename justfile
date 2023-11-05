@@ -9,6 +9,7 @@ up:
     git mv policies${v} policies${vn}
     git commit -am "rebuild" | git push
     git log -1 --pretty=format:%H | tee /dev/tty | pbcopy
+    basename policies*
 
 proc-commit COMMIT:
     #!/usr/bin/env bash
