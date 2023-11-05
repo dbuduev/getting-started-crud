@@ -7,7 +7,7 @@ up:
     v="${dir_name#policies}"
     vn=$(($v+1))
     git mv policies${v} policies${vn}
-    git commit -am "rebuild" && git push 2>/dev/null
+    git commit -am "rebuild" && git push >/dev/null
     git log -1 --pretty=format:%H | tee /dev/tty | pbcopy
     printf "\n%s\n" $(basename policies*)
 
