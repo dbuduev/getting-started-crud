@@ -1,3 +1,4 @@
+spitfire_dir := "/Users/dennis/Projects/Cerbos/spitfire"
 
 up:
     #!/usr/bin/env bash
@@ -7,7 +8,11 @@ up:
     vn=$(($v+1))
     git mv policies${v} policies${vn}
     git commit -am "rebuild" | git push
-    git log -1 --pretty=format:%H | cat
+    git log -1 --pretty=format:%H | tee /dev/tty | pbcopy
 
-
+proc-commit COMMIT:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    cd '{{ spitfire_dir }}'
+    just proc-commit 636080766 dbuduev getting-started-crud branch main '{{ COMMIT }}'
 
