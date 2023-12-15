@@ -17,3 +17,8 @@ proc-commit COMMIT:
     cd '{{ spitfire_dir }}'
     just proc-commit 636080766 dbuduev getting-started-crud branch main '{{ COMMIT }}'
 
+
+ci:
+    #!/usr/bin/env bash
+    git commit -am "rebuild" && git push 2>/dev/null
+    git log -1 --pretty=format:%H | tee /dev/tty | pbcopy
