@@ -17,6 +17,7 @@ principals:
     roles:
       - USER
 
+
 resources:
   resource1:
     id: resource1
