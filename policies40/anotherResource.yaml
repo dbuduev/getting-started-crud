@@ -3,7 +3,7 @@
 apiVersion: api.cerbos.dev/v1
 metadata:
   annotations:
-    hub.cerbos.cloud/embedded-pdp: "true"
+    hub.cerbos.cloud/embedded-pdp: "false"
 
 resourcePolicy:
   version: default
