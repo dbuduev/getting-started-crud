@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://api.cerbos.dev/latest/cerbos/policy/v1/TestSuite.schema.json
 
-name: Basic Resource test suite
+name: Another Resource test suite
 description: Tests for verifying the anotherResource policy
 
 principals:
