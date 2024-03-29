@@ -7,7 +7,6 @@ metadata:
 
 resourcePolicy:
   version: default
-
   resource: basicResource
 
   rules:
