@@ -9,7 +9,6 @@ resourcePolicy:
   version: default
   resource: basicResource
 
-
   rules:
     # If the `principal`s role is `admin` then all the actions are allowed.
     - actions:
