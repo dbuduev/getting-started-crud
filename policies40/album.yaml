@@ -1,0 +1,31 @@
+---
+apiVersion: api.cerbos.dev/v1
+metadata:
+  annotations:
+    hub.cerbos.cloud/embedded-pdp: "true"
+
+resourcePolicy:
+  version: "default"
+  resource: "album:object"
+  rules:
+    - actions: ['*']
+      effect: EFFECT_ALLOW
+      roles:
+        - admin
+
+    - actions: ['view', 'flag']
+      effect: EFFECT_ALLOW
+      roles:
+        - user
+      condition:
+        match:
+          expr: request.resource.attr.public == true
+
+    - actions: ['view-as-vip']
+      effect: EFFECT_ALLOW
+      roles:
+        - user
+      condition:
+        match:
+          expr: request.principal.attr.vip == true
+
