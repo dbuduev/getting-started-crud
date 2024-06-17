@@ -17,6 +17,7 @@ resourcePolicy:
       effect: EFFECT_ALLOW
       roles:
         - user
+        - employee
       condition:
         match:
           expr: request.resource.attr.public == true
