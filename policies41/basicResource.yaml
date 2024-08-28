@@ -5,6 +5,7 @@ metadata:
   annotations:
     hub.cerbos.cloud/embedded-pdp: "true"
 
+
 resourcePolicy:
   version: default
   resource: basicResource
